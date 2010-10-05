@@ -1,0 +1,21 @@
+<% Entry::CATEGORIES.each {|kind| %>
+<h1><%=kind.humanize%></h1>
+<% if @entries[kind].size > 0 then %>
+<table>
+<tbody>
+	<tr>
+		<th>Board username</th>
+		<th>Class</th>
+		<th>Category</th>
+		<th>ET</th>
+		<th>Points</th>
+	</tr>
+	<%= render :partial => 'entries/entry', :collection => @entries[kind] %>
+</tbody>
+</table>
+<% else %>
+<div class="empty-results">Oh snizzap! No times have been recorded for <%=kind.humanize%> yet.</div>
+<% end %>
+<% } %>
+
+<%=link_to 'Add New Entry', new_entry_path%>

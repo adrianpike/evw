@@ -1,0 +1,14 @@
+<table>
+<tbody>
+	<tr>
+		<th>Board username</th>
+		<th>Class</th>
+		<th>Category</th>
+		<th>ET</th>
+		<th>Points</th>
+	</tr>
+	<%= render :partial => 'entries/entry', :collection => @entries %>
+</tbody>
+</table>
+
+<%=link_to 'Add New Entry', new_entry_path%>

@@ -1,0 +1,10 @@
+<tr>
+	<td><%=entry.user.username%></td>
+	<td><%=entry.tb_class %></td>
+	<td><%=entry.category%></td>
+	<td><%=entry.et%></td>
+	<td><%=entry.points%></td>
+	<% if current_user.admin then %>
+		<td><%=link_to 'Approve', approve_entry_path(entry)%></td>
+	<% end %>
+</tr>
