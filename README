@@ -1,23 +1,11 @@
 === TB EvW App ===
 
-user:
-board_username
-model
-description
-admin (bool)
-
-entry:
-entrant_id
-class_id
-category_id
-rt
-sixty
-eighth
-eighth_trap
-thousand
-et
-trap
-nitrous (bool)
-raced_at
-timeslip_url
-timeslip_file
+TODO:
+- view individual entries
+- edit/delete entries
+	- when I edit mine, they become unapproved unless i'm an admin
+- sum points, running leaderboard on a per-year basis
+- car info
+- view all users (*)
+- sexify tables & forms
+- email admins when a new submission is added
