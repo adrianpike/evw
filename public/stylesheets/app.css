@@ -32,6 +32,9 @@ a:hover {
    margin:0px;
    padding:10px 0px;
 }
+#header-content h1 a {
+   color:#222;
+}
 
 
 #footer {
