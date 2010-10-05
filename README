@@ -1,0 +1,23 @@
+=== TB EvW App ===
+
+user:
+board_username
+model
+description
+admin (bool)
+
+entry:
+entrant_id
+class_id
+category_id
+rt
+sixty
+eighth
+eighth_trap
+thousand
+et
+trap
+nitrous (bool)
+raced_at
+timeslip_url
+timeslip_file
