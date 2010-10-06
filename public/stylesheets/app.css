@@ -80,3 +80,25 @@ td {
    margin-top:30px;
    border-bottom:1px solid #ccc;
 }
+
+#actionbar {
+   border-top:1px solid #777;
+   background-color:#bbb;
+   border-bottom:1px solid #888;
+}
+
+#actions {
+   width:960px;
+   margin:0px auto;
+   padding:0px;
+}
+
+#actions li {
+   list-style:none;
+   display:inline-block;
+   margin:10px 10px 10px 0px;
+}
+
+#actions li a {
+
+}

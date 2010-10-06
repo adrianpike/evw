@@ -15,6 +15,17 @@
 		<h1><%=link_to 'Turbobricks EvW App', '/'%></h1>
 	</div>
 </div>
+<% if current_user then %>
+<div id="actionbar">
+	<ul id="actions">
+		<li><%=link_to 'Add New Entry', new_entry_path%></li>
+		<% if current_user.admin then %>
+			<li><%=link_to 'Pending Entries', unapproved_entries_path %></li>
+			<li><%=link_to 'All Users', users_path %></li>
+		<% end %>
+	</ul>
+</div>
+<% end %>
 <div id="content">
 	<%= yield %>
 </div>
