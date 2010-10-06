@@ -4,7 +4,7 @@
 	<td><%=entry.category%></td>
 	<td><%=link_to entry.et, entry%></td>
 	<td><%=link_to entry.points, entry%></td>
-	<% if current_user.admin and not entry.approver_id then %>
+	<% if current_user and current_user.admin and not entry.approver_id then %>
 		<td><%=link_to 'Approve', approve_entry_path(entry)%></td>
 	<% end %>
 </tr>
