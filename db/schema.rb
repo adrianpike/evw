@@ -10,29 +10,29 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101005175314) do
+ActiveRecord::Schema.define(:version => 20101006041050) do
 
   create_table "entries", :force => true do |t|
-    t.integer   "user_id"
-    t.integer   "approver_id"
-    t.string    "tb_class"
-    t.string    "category"
-    t.float     "rt"
-    t.float     "sixty"
-    t.float     "eighth"
-    t.float     "eighth_trap"
-    t.float     "thousand_foot"
-    t.float     "et"
-    t.float     "trap"
-    t.boolean   "nitrous",       :default => false
-    t.string    "raced_at"
-    t.string    "timeslip_url"
-    t.string    "photo_url"
-    t.timestamp "created_at"
-    t.timestamp "updated_at"
-    t.string    "model"
-    t.string    "car_year"
-    t.text      "description"
+    t.integer  "user_id"
+    t.integer  "approver_id"
+    t.string   "tb_class"
+    t.string   "category"
+    t.float    "rt"
+    t.float    "sixty"
+    t.float    "eighth"
+    t.float    "eighth_trap"
+    t.float    "thousand_foot"
+    t.float    "et"
+    t.float    "trap"
+    t.boolean  "nitrous",       :default => false
+    t.string   "timeslip_url"
+    t.string   "photo_url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "model"
+    t.string   "car_year"
+    t.text     "description"
+    t.datetime "raced_at"
   end
 
   create_table "users", :force => true do |t|

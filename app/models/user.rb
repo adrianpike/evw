@@ -12,6 +12,9 @@ class User < ActiveRecord::Base
 		name || username
 	end
 	
+	def to_param
+		username
+	end
 	
 	validates_presence_of :password, :if => :password_required?
 	validates_uniqueness_of :username

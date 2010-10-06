@@ -1,5 +1,5 @@
 <% Entry::CATEGORIES.each {|kind| %>
-<h1><%=kind.humanize%></h1>
+<h1><%=kind.humanize%> &mdash; <%=Entry.totals(kind)%></h1>
 <% if @entries[kind].size > 0 then %>
 <table>
 <tbody>

@@ -1,0 +1,49 @@
+<h1><%=link_to @entry.user.username, @entry.user%></h1>
+
+<h2><%=@entry.et%> @ <%=@entry.trap%> &mdash; <%=@entry.points%> points</h2>
+
+<h3><%=@entry.category%> &mdash; <%=@entry.tb_class%></h3>
+
+<h4>Run Details</h4>
+<dl>
+	<dt>RT</dt>
+	<dd><%=@entry.rt%></dd>
+	<dt>60'</dt>
+	<dd><%=@entry.sixty%></dd>
+	<dt>1/8 ET</dt>
+	<dd><%=@entry.eighth%></dd>
+	<dt>1/8 Trap</dt>
+	<dd><%=@entry.eighth_trap%></dd>
+	<dt>1000'</dt>
+	<dd><%=@entry.thousand_foot%></dd>
+	<dt>Used Nitrous?</dt>
+	<dd><%=@entry.nitrous ? 'Yep.' : 'Nope.'%></dd>
+	<dt>Raced At</dt>
+	<dd><%=@entry.raced_at%></dd>
+</dl>
+	
+<%=link_to @entry.timeslip_url if @entry.timeslip_url%>
+
+<h4>Car Details</h4>
+<dl>
+	<dt>Model</dt>
+	<dd><%=@entry.model%></dd>
+	<dt>Year</dt>
+	<dd><%=@entry.car_year%>
+</dl>
+
+<%=link_to @entry.photo_url if @entry.photo_url%>
+
+<p><%=@entry.description%></p>
+
+<% if current_user.admin then %>
+<h4>Admin Tasks</h4>
+<ul>
+	<li><%=link_to 'Edit', edit_entry_path(@entry)%></li>
+	<% if @entry.approver_id %>
+		<li>Approved by <%=@entry.approver.name%></li>
+	<% else %>
+		<li><%=link_to 'Approve', approve_entry_path(@entry) %></li>
+	<% end %>
+</ul>
+<% end %>

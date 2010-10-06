@@ -21,6 +21,12 @@ class Entry < ActiveRecord::Base
 		@new_username = un
 	end
 	
+	def self.totals(categories = CATEGORIES, classes = CLASSES, year=Time.current)
+		self.all(:conditions => ['category in (?) and tb_class in (?) and raced_at > ? and raced_at < ?', categories.to_a,classes.to_a, year.at_beginning_of_year, year.at_beginning_of_year + 1.year]).sum{|e|
+			e.points
+		}
+	end
+	
 	def points
 		val = 180.9 + -10 * et
 		if (val>0 and val<80) then

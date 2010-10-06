@@ -1,11 +1,10 @@
 === TB EvW App ===
 
 TODO:
-- view individual entries
 - edit/delete entries
 	- when I edit mine, they become unapproved unless i'm an admin
-- sum points, running leaderboard on a per-year basis
-- car info
-- view all users (*)
+- set up the leaderboards for classes & categories
+- cool other leaderboards, fastest 60? biggest gain in the long end of the track?
 - sexify tables & forms
 - email admins when a new submission is added
+- pull car details from previous entries

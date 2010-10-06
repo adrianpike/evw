@@ -31,6 +31,19 @@ class EntriesController < ApplicationController
 		@entry = Entry.find(params[:id])
 	end
 	
+	def edit
+		@entry = Entry.find(params[:id])
+	end
+	
+	def update
+		@entry = Entry.find(params[:id])
+		if @entry.update_attributes(params[:entry]) then
+			redirect_to @entry
+		else
+			render :edit
+		end
+	end
+	
 	def approve
 		@entry = Entry.find(params[:id])
 		@entry.approver = current_user if current_user.admin

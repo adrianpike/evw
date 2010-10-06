@@ -1,0 +1,16 @@
+<%= f.semantic_errors %>
+<%= f.inputs do %>
+	<% if current_user.admin then %>
+		<%=f.input :user, :collection => User.all.collect{|u| [u.username, u.id]}, :blank => true %>
+		<%=f.input :new_username, :label => 'New Username' %>
+	<% else %>
+		This entry will be for <strong><%=current_user.username%></strong>.
+	<% end %>
+
+	<%=f.input :tb_class, :as => :select, :collection => Entry::CLASSES.collect{|c| [c.humanize,c]}, :label => 'Car Class', :prompt => false %>
+	<%=f.input :category, :as => :select, :collection => Entry::CATEGORIES.collect{|c| [c.humanize,c]}, :prompt => false %>
+	
+	<%=f.inputs :rt, :sixty, :eighth, :eighth_trap, :thousand_foot, :et, :trap, :nitrous, :raced_at, :timeslip_url, :photo_url, :model, :car_year, :description %>
+	
+<% end %>
+<%= f.buttons %>
