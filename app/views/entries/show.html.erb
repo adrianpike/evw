@@ -22,7 +22,7 @@
 	<dd><%=@entry.raced_at%></dd>
 </dl>
 	
-<%=link_to @entry.timeslip_url if @entry.timeslip_url%>
+<%=link_to @entry.timeslip_url, @entry.timeslip_url if @entry.timeslip_url%>
 
 <h4>Car Details</h4>
 <dl>
@@ -32,7 +32,7 @@
 	<dd><%=@entry.car_year%>
 </dl>
 
-<%=link_to @entry.photo_url if @entry.photo_url%>
+<%=link_to @entry.photo_url, @entry.photo_url if @entry.photo_url%>
 
 <p><%=@entry.description%></p>
 

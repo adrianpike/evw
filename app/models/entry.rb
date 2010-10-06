@@ -41,7 +41,7 @@ class Entry < ActiveRecord::Base
 	end
 	
 	def generate_new_user
-		if @new_username then
+		if @new_username and (not @new_username.blank?) then
 			if (not user_id) or user_id.blank? then
 				u = User.find_or_create_by_username(@new_username)
 				if u then
